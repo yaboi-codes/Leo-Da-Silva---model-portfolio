@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", cursive;
+  background: #f8f5ef;
+  color: #111;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0px 0.6pc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.92);
+  border-bottom: 1px solid #d7d7d7;
+  z-index: 100;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  gap: 24px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.brand {
+  font-size: 2rem;
+  font-style: italic;
+}
+
+section {
+  min-height: 100vh;
+  padding: 100px 5.5% 40px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero-side h2 {
+  font-size: 3.8rem;
+  font-style: italic;
+}
+.hero-side h3 {
+  font-size: x-large;
+  text-align: center;
+}
+
+.hero-side p, .social-links a {
+  font-size: 1rem;
+}
+
+.hero-image {
+  text-align: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 420px;
+  height: 560px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 3px solid #111;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.gallery h2,
+.social-section h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #1f5f42;
+  font-style: italic;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: transform 0.3s ease;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.03);
+}
+
+.social-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  font-size: 1.2rem;
+}
+
+.social-card {
+  padding: 16px 24px;
+  border: 1px solid #111;
+  min-width: 260px;
+  text-align: center;
+  border-radius: 14px;
+  transition: 0.3s ease;
+}
+
+.social-card:hover {
+  background: #1f5f42;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .brand {
+    order: -1;
+  }
+}
